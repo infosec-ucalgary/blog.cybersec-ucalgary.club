@@ -3,9 +3,19 @@
 }
 
 .btn-primary {
-  @apply bg-primary text-white hover:text-white;
+  @apply bg-primary text-black hover:text-hover;
 }
 
 .btn-outline-primary {
-  @apply border-primary bg-transparent hover:bg-primary hover:text-white;
+  @apply border-primary bg-transparent hover:bg-primary hover:text-hover;
 }
+
+.btn-pagination {
+  @apply text-white border border-primary hover:bg-primary hover:text-hover rounded-md h-10 w-10 leading-[36px] font-semibold flex items-center justify-center transition duration-200;
+}
+
+.btn-pagination-onPage {
+  @apply border border-primary bg-primary rounded-md h-10 w-10 leading-[35px] font-semibold text-hover
+}
+
+
