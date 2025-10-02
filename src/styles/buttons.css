@@ -3,15 +3,15 @@
 }
 
 .btn-primary {
-  @apply bg-primary text-black hover:text-hover;
+  @apply bg-primary text-black hover:text-light;
 }
 
 .btn-outline-primary {
-  @apply border-primary bg-transparent hover:bg-primary hover:text-hover;
+  @apply border-primary bg-transparent hover:bg-primary hover:text-light;
 }
 
 .btn-pagination {
-  @apply text-white border border-primary hover:bg-primary hover:text-hover rounded-md h-10 w-10 leading-[36px] font-semibold flex items-center justify-center transition duration-200;
+  @apply text-light border border-primary hover:bg-primary hover:text-light rounded-md h-10 w-10 leading-[36px] font-semibold flex items-center justify-center transition duration-200;
 }
 
 .btn-pagination-onPage {
