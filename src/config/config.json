@@ -1,11 +1,11 @@
 {
   "site": {
-    "title": "Bookworm Light Astro | Blog Template",
-    "base_url": "https://bookworm-light-astro.vercel.app",
+    "title": "Cybersecurity Club Blog",
+    "base_url": "https://blog.cybersec-ucalgary.club/",
     "base_path": "/",
     "trailing_slash": false,
-    "favicon": "/images/favicon.png",
-    "logo": "/images/logo.png",
+    "favicon": "/images/logo.svg",
+    "logo": "/images/wordmark.png",
     "logo_width": "200",
     "logo_height": "34",
     "logo_text": "Bookworm Light"
@@ -23,13 +23,14 @@
   },
 
   "params": {
+    "copyright": "© 2019 - Present | UCalgary CyberSecurity Club. All rights reserved.",
     "contact_form_action": "#",
-    "copyright": "Copyright © 2025 a theme by [Themefisher](https://themefisher.com)"
+    "theme_copyright": "Copyright © 2025 a theme by [Themefisher](https://themefisher.com)"
   },
 
   "contactinfo": {
     "address": "355 S Grand Ave <br/> Los Angeles, CA 90071",
-    "email": "info@bookworm.org",
+    "email": "cybersec.club@ucalgary.ca",
     "phone": "+800 567 1234"
   }
 }

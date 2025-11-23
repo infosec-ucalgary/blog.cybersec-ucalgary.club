@@ -16,7 +16,7 @@
 }
 
 .nav-link {
-  @apply p-3 text-lg font-semibold text-dark transition hover:text-primary md:p-4;
+  @apply p-3 text-lg font-semibold text-text transition hover:text-primary md:p-4;
 }
 
 .nav-dropdown-list {
