@@ -7,6 +7,8 @@ import {
   IoLogoTwitter,
 } from "react-icons/io5";
 
+import { SiX } from "react-icons/si";
+
 const { base_url } = config.site;
 const { title, description, slug, className } = Astro.props;
 ---
@@ -24,12 +26,12 @@ const { title, description, slug, className } = Astro.props;
   </li>
   <li class="inline-block">
     <a
-      aria-label="twitter share button"
+      aria-label="x (formerly twitter) share button"
       href={`https://twitter.com/intent/tweet/?text=${title}&amp;url=${base_url}/${slug}`}
       target="_blank"
       rel="noreferrer noopener"
     >
-      <IoLogoTwitter />
+      <SiX />
     </a>
   </li>
   <li class="inline-block">

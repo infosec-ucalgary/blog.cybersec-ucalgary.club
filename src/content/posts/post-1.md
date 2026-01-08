@@ -1,23 +1,29 @@
 ---
-title: "How to make toys from old Olarpaper"
+title: "Welcome to the CyberSec Blog!"
 meta_title: ""
-description: "meta description"
-date: 2022-04-01T05:00:00Z
+description: ""
+date: 2025-01-12T12:00:00Z
 image: "/images/posts/01.jpg"
-categories: ["art"]
-authors: ["Mark Dinn"]
-tags: ["diy", "toy"]
+categories: ["Meta"]
+authors: []
+tags: ["Meta"]
 draft: false
 ---
 
-Nemo vel ad consectetur namut rutrum ex, venenatis sollicitudin urna. Aliquam erat volutpat. Integer eu ipsum sem. Ut bibendum lacus vestibulum maximus suscipit. Quisque vitae nibh iaculis neque blandit euismod.
+Greetings and welcome to the first CYBERSEC blog! This blog site is meant to share information ranging from cyber security topics and practices to social events and jobs in the cyber security field.
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut eius!
+This blog post will be an introduction to the CYBERSEC club for any new members or people who are just of a curious nature.
 
-## Creative Design
+The CYBERSEC club is here at University of Calgary to help students who are interested in cyber security and want to learn more about it or want to learn how to start a career in this field. We prioritize hands on learning and networking events with experts in the field through our many events during the school year. We also host an annual Capture the Flag event for beginners and experienced people alike.
 
-Nam ut rutrum ex, venenatis sollicitudin urna. Aliquam erat volutpat. Integer eu ipsum sem. Ut bibendum lacus vestibulum maximus suscipit. Quisque vitae nibh iaculis neque blandit euismod.
+If those events are too much for you don't worry we also host casual party games from time to time, so if you're just looking to hang out and meet people (or score some free food) we got you covered!
 
-> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut eius!
+Did I mention that our events are all free to attend? Well they are! So don't worry, we know that Uni students are broke. 
 
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel ad consectetur ut aperiam. Itaque eligendi natus aperiam? Excepturi repellendus consequatur quibusdam optio expedita praesentium est adipisci dolorem ut eius!
+Are you a big fan of cyber security and want to be a part of the team? We recruit regularly in the school year so keep an eye out!
+
+We look forward to seeing you!
+
+Thanks for reading our first blog!
+
+- The CYBERSEC Team
