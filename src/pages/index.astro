@@ -1,54 +1,21 @@
 ---
-export const prerender = false;
-
 import config from "@/config/config.json";
 import Base from "@/layouts/Base.astro";
 import Pagination from "@/layouts/components/Pagination.astro";
 import Posts from "@/layouts/Posts.astro";
 import { getSinglePage } from "@/lib/contentParser.astro";
-import { sortByNewestDate, sortByOldestDate } from "@/lib/utils/sortFunctions";
-import SortToggle from "@/layouts/components/sortToggle.astro";
-
+import { sortByDate } from "@/lib/utils/sortFunctions";
 
 const posts = await getSinglePage("posts");
-
-// read query param (?sort=newest | oldest)
-const sort = Astro.url.searchParams.get("sort") ?? "newest";
-
-const sortedPosts =
-  sort === "oldest"
-    ? sortByOldestDate(posts)
-    : sortByNewestDate(posts);
-
+const sortedPosts = sortByDate(posts);
 const totalPages = Math.ceil(posts.length / config.settings.pagination);
-const paginatedPosts = sortedPosts.slice(0, config.settings.pagination);
+const currentPosts = sortedPosts.slice(0, config.settings.pagination);
 ---
-
 
 <Base>
   <section class="section">
     <div class="container">
-      <!-- <div class="mb-8 flex gap-4">
-        <a
-          href="?sort=newest"
-          class={`px-4 py-2 rounded ${
-            sort === "newest" ? "bg-primary text-white" : "bg-gray-200"
-          }`}
-        >
-          Newest
-        </a>
-
-        <a
-          href="?sort=oldest"
-          class={`px-4 py-2 rounded ${
-            sort === "oldest" ? "bg-primary text-white" : "bg-gray-200"
-          }`}
-        >
-          Oldest
-        </a>
-      </div> -->
-      <SortToggle />
-      <Posts posts={paginatedPosts} />
+      <Posts posts={currentPosts} className="mb-16" />
       <Pagination currentPage={1} totalPages={totalPages} />
     </div>
   </section>

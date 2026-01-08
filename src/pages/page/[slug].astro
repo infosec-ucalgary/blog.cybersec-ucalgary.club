@@ -1,47 +1,41 @@
 ---
-export const prerender = false;
-
 import config from "@/config/config.json";
 import Base from "@/layouts/Base.astro";
 import Pagination from "@/layouts/components/Pagination.astro";
 import Posts from "@/layouts/Posts.astro";
-import SortToggle from "@/layouts/components/sortToggle.astro";
 import { getSinglePage } from "@/lib/contentParser.astro";
-import { sortByNewestDate, sortByOldestDate, } from "@/lib/utils/sortFunctions";
+import { sortByDate } from "@/lib/utils/sortFunctions";
 
 export async function getStaticPaths() {
   const posts = await getSinglePage("posts");
   const totalPages = Math.ceil(posts.length / config.settings.pagination);
+  const paths = [];
 
-  return Array.from({ length: totalPages - 1 }).map((_, i) => ({
-    params: { slug: String(i + 2) },
-  }));
+  for (let i = 1; i < totalPages; i++) {
+    paths.push({
+      params: {
+        slug: (i + 1).toString(),
+      },
+    });
+  }
+  return paths;
 }
 
+const { slug } = Astro.params;
 const posts = await getSinglePage("posts");
-
-const sort = Astro.url.searchParams.get("sort") ?? "newest";
-const currentPage = Number(Astro.params.slug);
-const pageSize = config.settings.pagination;
-
-const sortedPosts =
-  sort === "oldest"
-    ? sortByOldestDate(posts)
-    : sortByNewestDate(posts);
-
-const totalPages = Math.ceil(sortedPosts.length / pageSize);
-
-const start = (currentPage - 1) * pageSize;
-const end = currentPage * pageSize;
-const currentPosts = sortedPosts.slice(start, end);
+const sortedPosts = sortByDate(posts);
+const totalPages = Math.ceil(posts.length / config.settings.pagination);
+const currentPage = slug && !isNaN(Number(slug)) ? Number(slug) : 1;
+const indexOfLastPost = currentPage * config.settings.pagination;
+const indexOfFirstPost = indexOfLastPost - config.settings.pagination;
+const currentPosts = sortedPosts.slice(indexOfFirstPost, indexOfLastPost);
 ---
 
 <Base>
   <section class="section">
     <div class="container">
-      <SortToggle />
       <Posts className="mb-16" posts={currentPosts} />
-      <Pagination totalPages={totalPages} currentPage={currentPage}/>
+      <Pagination totalPages={totalPages} currentPage={currentPage} />
     </div>
   </section>
 </Base>

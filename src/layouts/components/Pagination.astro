@@ -1,7 +1,6 @@
 ---
 
 const { section, currentPage, totalPages } = Astro.props;
-const query = Astro.url.search; // ← THIS is the key line
 
 const indexPageLink = currentPage === 2;
 const hasPrevPage = currentPage > 1;
@@ -21,8 +20,8 @@ for (let i = 1; i <= totalPages; i++) {
         <a
           href={
             indexPageLink
-              ? `${section ? "/" + section : "/"}${query}`
-              : `${section ? "/" + section : ""}/page/${currentPage - 1}${query}`
+              ? `${section ? "/" + section : "/"}`
+              : `${section ? "/" + section : ""}/page/${currentPage - 1}`
           }
           class="btn-pagination"
         >
@@ -73,10 +72,9 @@ for (let i = 1; i <= totalPages; i++) {
           <a
             href={
               i === 0
-                ? `${section ? "/" + section : "/"}${query}`
-                : `${section ? "/" + section : ""}/page/${pagination}${query}`
+                ? `${section ? "/" + section : "/"}`
+                : `${section ? "/" + section : ""}/page/${pagination}`
             }
-
             aria-current="page"
             class="btn-pagination"
           >
@@ -88,7 +86,7 @@ for (let i = 1; i <= totalPages; i++) {
       {/* next page */}
       {hasNextPage ? (
         <a
-          href={`${section ? "/" + section : ""}/page/${currentPage + 1}${query}`}
+          href={`${section ? "/" + section : ""}/page/${currentPage + 1}`}
           class="btn-pagination"
         >
           <span class="sr-only">Next</span>

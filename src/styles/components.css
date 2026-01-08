@@ -56,12 +56,9 @@
   li {
     @apply inline-block;
     a {
-      @apply block p-3 text-white transition hover:text-primary;
+      @apply block p-3 text-dark transition hover:text-primary;
       svg {
         @apply text-lg;
-        width: 1.25em;
-        height: 1.25em;
-        vertical-align: middle;
       }
     }
   }

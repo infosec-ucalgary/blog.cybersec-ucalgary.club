@@ -4,11 +4,11 @@ import Authors from "@/layouts/Authors.astro";
 import Base from "@/layouts/Base.astro";
 import Pagination from "@/layouts/components/Pagination.astro";
 import { getSinglePage } from "@/lib/contentParser.astro";
-import { sortByNewestDate } from "@/lib/utils/sortFunctions";
+import { sortByDate } from "@/lib/utils/sortFunctions";
 import { markdownify } from "@/lib/utils/textConverter";
 
 const authors = await getSinglePage("authors");
-const sortedPosts = sortByNewestDate(authors);
+const sortedPosts = sortByDate(authors);
 const totalPages = Math.ceil(authors.length / config.settings.pagination);
 const currentPosts = sortedPosts.slice(0, config.settings.pagination);
 ---
