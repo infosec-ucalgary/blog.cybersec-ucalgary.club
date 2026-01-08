@@ -23,6 +23,3 @@ package-lock.json
 
 # ignore .astro directory
 .astro
-
-# Local Netlify folder
-.netlify
