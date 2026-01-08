@@ -1,6 +1,8 @@
 ---
 const { source, className } = Astro.props;
 
+import { SiX } from "react-icons/si";
+
 import {
   IoCall,
   IoGlobeOutline,
@@ -27,7 +29,6 @@ import {
   IoLogoSoundcloud,
   IoLogoTiktok,
   IoLogoTumblr,
-  IoLogoTwitter,
   IoLogoVimeo,
   IoLogoVk,
   IoLogoWhatsapp,
@@ -89,12 +90,12 @@ const {
     twitter && (
       <li class="inline-block">
         <a
-          aria-label="twitter"
+          aria-label="x (formerly twitter)"
           href={twitter}
           target="_blank"
           rel="noopener noreferrer nofollow"
         >
-          <IoLogoTwitter />
+          <SiX />
         </a>
       </li>
     )
