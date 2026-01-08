@@ -9,15 +9,15 @@ const aboutCollection = defineCollection({
     meta_title: z.string().optional(),
     image: z.string().optional(),
     draft: z.boolean().optional(),
-    what_i_do: z.object({
-      title: z.string(),
-      items: z.array(
-        z.object({
-          title: z.string(),
-          description: z.string(),
-        }),
-      ),
-    }),
+    // what_i_do: z.object({
+    //   title: z.string(),
+    //   items: z.array(
+    //     z.object({
+    //       title: z.string(),
+    //       description: z.string(),
+    //     }),
+    //   ),
+    // }),
   }),
 });
 
@@ -34,6 +34,11 @@ const authorsCollection = defineCollection({
         facebook: z.string().url().optional(),
         twitter: z.string().url().optional(),
         instagram: z.string().url().optional(),
+        linkedin: z.string().url().optional(),
+        youtube: z.string().url().optional(),
+        website: z.string().url().optional(),
+        discord: z.string().url().optional(),
+        github: z.string().url().optional(),
       })
       .optional(),
   }),

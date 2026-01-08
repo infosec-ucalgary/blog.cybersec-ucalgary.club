@@ -1,4 +1,5 @@
 ---
+import Social from "@/components/Social.astro";
 import { markdownify } from "@/lib/utils/textConverter";
 import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
@@ -33,6 +34,7 @@ const { authors } = Astro.props;
             {author.data.title}
           </a>
         </h3>
+        <Social source={author.data.social} className="social-icons-simple" />
         {author.body && (
           <p class="mb-3" set:text={markdownify(author.body.slice(0, 100))} />
         )}
